@@ -8,9 +8,11 @@ import android.view.View.OnClickListener;
 import android.view.View;
 import java.util.Objects;
 
+import static android.R.id.button1;
 import static com.example.johanolsson.testcal.R.id.button0;
+import static com.example.johanolsson.testcal.R.id.numField;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //Add all the buttons
-        Button button0 = (Button) findViewById(button0);
-        button0.setOnClickListener(this);
+        Button button0 = (Button) findViewById(R.id.button0);
         Button button1 = (Button) findViewById(R.id.button1);
         Button button2 = (Button) findViewById(R.id.button2);
         Button button3 = (Button) findViewById(R.id.button3);
@@ -38,19 +39,88 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button buttonDel = (Button) findViewById(R.id.buttonDel);
 
         //Add the editText box
-        EditText numfield = (EditText) findViewById(R.id.numField);
+        final EditText numField = (EditText) findViewById(R.id.numField);
+
+        button0.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"0");
+            }
+        });
+
+        button1.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"1");
+            }
+        });
+
+        button2.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"2");
+            }
+        });
+
+        button3.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"3");
+            }
+        });
+
+        button4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"4");
+            }
+        });
+
+        button5.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"5");
+            }
+        });
+
+        button6.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"6");
+            }
+        });
+
+        button7.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"7");
+            }
+        });
+
+        button8.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"8");
+            }
+        });
+
+        button9.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+"9");
+            }
+        });
+
+        buttonComma.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                numField.setText(numField.getText()+".");
+            }
+        });
 
 
-    }
+            }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
 
         }
-
-
-    }
-
-}
 
